@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Employee Operation</h2>
+
+<div mat-dialog-content style="height: 380px;">
+    <form [formGroup]="employeeForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Name</mat-label>
+            <input matInput formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Code</mat-label>
+            <input matInput formControlName="code" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Salary</mat-label>
+            <input formControlName="salary" matInput type="number" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Age</mat-label>
+            <input formControlName="age" matInput type="number" />
+        </mat-form-field>
+    </form>
+
+    <div mat-dialog-actions align="end">
+        <button (click)="saveOrEditBtn=='Save'? saveEmployee(): updateEmployee()" mat-raised-button color="primary">{{saveOrEditBtn}}</button>
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    </div>
+
+</div>

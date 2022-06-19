@@ -1,0 +1,35 @@
+<style>
+    mat-form-field{
+    width: 100%;
+}
+</style>
+
+<div class="container mt-5">
+    <h1 class="mb-3">Email From Here</h1>
+
+    <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+        <mat-form-field appearance="outline">
+            <mat-label>Mail To</mat-label>
+            <input matInput formControlName="toEmail" type="text"/>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Email Subject</mat-label>
+            <input matInput formControlName="subject" type="text"/>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Email Body</mat-label>
+            <input matInput formControlName="body" type="text"/>
+        </mat-form-field>
+
+        <div mat-dialog-actions align="end">
+            <button type="submit" mat-raised-button color="primary" style="width: 100%">Send</button>
+        </div>
+    </form>
+
+    
+
+</div>
+
+
